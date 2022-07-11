@@ -1,0 +1,75 @@
+.hero {
+  background-color: #2f303a;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-mob-1x.jpg);
+  @include retina {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-mob-2x.jpg);
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
+  min-height: 400px;
+  @include tablet {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-tab-1x.jpg);
+    @include retina {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tab-2x.jpg);
+    }
+  }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    min-height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-desk-1x.jpg);
+    @include retina {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-desk-2x.jpg);
+    }
+  }
+}
+
+.hero__title {
+  margin: 0 auto;
+  text-align: center;
+  color: $secondary-color;
+  text-transform: uppercase;
+  max-width: 360px;
+  @include font(900, 26px, 1.62, 0.06em);
+  @include desktop {
+    max-width: 696px;
+    @include font(900, 44px, 1.36, 0.06em);
+  }
+}
+
+.hero__btn {
+  margin-top: 30px;
+  display: inline-block;
+  font-family: inherit;
+  color: $secondary-color;
+  @include font(700, 16px, 1.88, 0.06em);
+  background-color: $accent-color;
+  cursor: pointer;
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  align-items: center;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
