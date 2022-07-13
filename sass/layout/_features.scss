@@ -26,10 +26,14 @@
 }
 
 .features__name {
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: $title-text-color;
   @include font(700, 14px, 1.14, 0.03em);
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .features__text {
